@@ -1,11 +1,14 @@
-import React from 'react';
-import { Divider } from 'semantic-ui-react';
+import React, { useState } from 'react';
 import 'semantic-ui-css/semantic.min.css'
+import { SideNavigationBar } from 'components/sideNavigationBar/SideNavigationBar';
 
-function App() {
+const App = () => {
+  const [sideBarVisible, setSidebarVisible] = useState(false);
+  // Update side bar visibility to show animation
+  setTimeout(() => setSidebarVisible(true));
   return (
     <div className="App">
-      <Divider horizontal>Jingcheng Zhang</Divider>
+      <SideNavigationBar visible={sideBarVisible}/>
     </div>
   );
 }

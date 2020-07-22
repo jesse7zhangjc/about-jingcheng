@@ -1,0 +1,45 @@
+.sidebar {
+  padding-left: 60px;
+}
+
+.ui.section.divider.top-divider {
+  margin-top: 7rem; 
+}
+
+.sidebar .header .name,
+.sidebar .header .title {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.sidebar .header .name {
+  padding-bottom: 15px;
+}
+
+.sidebar .header .title {
+  color: #3A58ED;
+}
+
+.sidebar .menu .item.active span {
+  border-bottom: 3px solid #3A58ED;
+}
+
+.sidebar .menu .item:not(.active) span {
+  position: relative;
+}
+
+.sidebar .menu .item:not(.active) span:after {
+  content: '';
+  display: block;
+  border-bottom: 3px solid #3A58ED;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.sidebar .menu .item:not(.active) span:hover:after {
+  width: 100%;
+}
