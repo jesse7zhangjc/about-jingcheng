@@ -4,7 +4,7 @@ import { useHistory, useLocation } from 'react-router-dom'
 
 
 import { sidebarShowContentTimeout } from 'utils/transitionUtil';
-import { pagePathMap, pageItems, contactItems } from 'utils/pageUtils';
+import { pagePathMap, pageItems, contactItems, pathPageMap } from 'utils/pageUtils';
 
 import 'components/sideNavigationBar/sideNavigationBar.css';
 
@@ -52,10 +52,19 @@ const SideBarMenuItems = (props: ISideBarMenuItemsProps) => {
   );
 };
 
+const CopyRightFooter = () => (
+  <div className="copy-right-footer">
+    <p>© 2020 Jingcheng Zhang</p>
+    <p>Built from scratch with React</p>
+  </div>
+);
+
 const SideNavigationBar = () => {
   const [activeItem, setActiveItem] = useState(pageItems[0]);
   const [showSidebar, setShowSidebar] = useState(false);
   const [showItems, setShowItems] = useState(false);
+  const { pathname } = useLocation();
+  pathPageMap[pathname] && activeItem !== pathPageMap[pathname] && setActiveItem(pathPageMap[pathname]);
   setTimeout(() => setShowSidebar(true));
   setTimeout(() => setShowItems(true), sidebarShowContentTimeout);
   return (
@@ -70,6 +79,7 @@ const SideNavigationBar = () => {
           <SideBarMenuItems menuItems={contactItems} activeItem={activeItem} />
         </Container>
       </Transition>
+      <CopyRightFooter />
     </Sidebar>
   );
 };

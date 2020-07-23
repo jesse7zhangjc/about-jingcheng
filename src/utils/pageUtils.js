@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 import messages from 'messages/messages';
 
 const { sideNavigationBar: snbm } = messages;
@@ -17,3 +19,5 @@ export const pagePathMap = {
   [snbm.about]: '/about',
   [snbm.resume]: '/resume',
 };
+
+export const pathPageMap = _.invert(pagePathMap);

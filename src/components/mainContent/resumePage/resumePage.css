@@ -1,0 +1,67 @@
+.resume-page.ui.container {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.resume-title,
+.resume-subtitle,
+.resume-subtitle-link {
+  font-weight: bolder !important;
+  letter-spacing: 3px;
+}
+
+.resume-subtitle {
+  text-align: center;
+}
+
+.resume-subtitle-link {
+  padding-right: 30px !important;
+}
+
+.resume-subtitle-link a,
+.resume-subtitle-link a:hover {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.resume-exp-item-employer-title {
+  margin-bottom: 0 !important;
+}
+
+.resume-exp-item-employer-title span {
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  letter-spacing: 1px;
+}
+
+.resume-exp-item-duration {
+  margin-top: 0.5rem !important;
+  font-weight: normal !important;
+  letter-spacing: 1px;
+}
+
+.resume-edu-item-degree,
+.resume-edu-item-in,
+.resume-edu-item-major,
+.resume-edu-item-comma,
+.resume-edu-item-class {
+  font-weight: 300 !important;
+}
+
+.resume-edu-item-school {
+  font-weight: bolder;
+}
+
+span.resume-exp-item-dash,
+span.resume-edu-item-in {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+span.resume-edu-item-comma {
+  padding-right: 0.5rem !important;
+}
+
+div.resume-edu-degree-major,
+div.resume-edu-school-class {
+  margin-bottom: 1rem;
+}

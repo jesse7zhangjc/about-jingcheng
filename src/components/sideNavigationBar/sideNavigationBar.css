@@ -4,6 +4,7 @@
 
 .sidebar {
   padding-left: 60px;
+  background-color: #F7F7F7;
 }
 
 .sidebar .ui.section.divider.top-divider {
@@ -21,11 +22,11 @@
 }
 
 .sidebar .header .title {
-  color: #3A58ED;
+  color: #FC97DF;
 }
 
 .sidebar .menu .item.active span {
-  border-bottom: 3px solid #3A58ED;
+  border-bottom: 3px solid #FC97DF;
 }
 
 .sidebar .menu .item:not(.active) span {
@@ -35,7 +36,7 @@
 .sidebar .menu .item:not(.active) span:after {
   content: '';
   display: block;
-  border-bottom: 3px solid #3A58ED;
+  border-bottom: 3px solid #FC97DF;
   width: 0;
   position: absolute;
   left: 0;
@@ -46,4 +47,15 @@
 
 .sidebar .menu .item:not(.active) span:hover:after {
   width: 100%;
+}
+
+.copy-right-footer {
+  font-size: 11px;
+  position: fixed;
+  bottom: 30px;
+}
+
+.copy-right-footer p {
+  margin-bottom: 0;
+  color: grey;
 }
