@@ -65,3 +65,12 @@ div.resume-edu-degree-major,
 div.resume-edu-school-class {
   margin-bottom: 1rem;
 }
+
+#experiment-section .resume-subtitle,
+.resume-exp-item-desc-list {
+  min-width: 650px;
+}
+
+.resume-exp-item-desc-list {
+  text-align: justify;
+}

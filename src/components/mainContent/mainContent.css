@@ -4,6 +4,7 @@
 
 .main-content {
   width: calc(100% - 350px);
+  min-width: 650px;
   height: 100vh;
   overflow: auto;
 }

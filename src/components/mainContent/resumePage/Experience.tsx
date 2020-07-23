@@ -17,8 +17,8 @@ const Experience = (props: IExperienceProps) => {
         <Header className="resume-exp-item-title" as="span">{props.title}</Header>
       </div>
       <Header className="resume-exp-item-duration" as="h5">{props.duration}</Header>
-      <List bulleted>
-        {props.descriptions.map((dsc, idx) => <List.Item key={idx}>{dsc}</List.Item>)}
+      <List bulleted className="resume-exp-item-desc-list">
+        {props.descriptions.map((dsc, idx) => <List.Item key={idx} className="resume-exp-item-desc-item">{dsc}</List.Item>)}
       </List>
     </Container>
   );
