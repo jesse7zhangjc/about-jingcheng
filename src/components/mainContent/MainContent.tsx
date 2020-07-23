@@ -6,12 +6,16 @@ import ResumePage from 'components/mainContent/resumePage/ResumePage';
 
 import 'components/mainContent/mainContent.css';
 
-const MainContent = () => {
+export interface IMainContentProps {
+  sideBarReady?: boolean;
+};
+
+const MainContent = (props: IMainContentProps) => {
   return (
     <div className="main-content">
       <Switch>
-          <Route exact path="/"><HomePage /></Route>
-          <Route exact path="/resume"><ResumePage /></Route>
+          <Route exact path="/"><HomePage {...props} /></Route>
+        <Route exact path="/resume"><ResumePage {...props} /></Route>
       </Switch>
     </div>
   );

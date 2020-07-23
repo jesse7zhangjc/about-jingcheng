@@ -4,6 +4,7 @@ export const sideNavigationBar = {
   resume: 'Resume',
   linkedIn: 'LinkedIn',
   email: 'Email',
+  projects: 'Projects',
 };
 
 export const resumePage = {

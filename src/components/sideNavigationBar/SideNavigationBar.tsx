@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Sidebar, Menu, Divider, Transition, Container } from 'semantic-ui-react';
+import { Sidebar, Menu, Divider, Transition, Container, Icon, SemanticICONS } from 'semantic-ui-react';
 import { useHistory, useLocation } from 'react-router-dom'
 
 
-import { sidebarShowContentTimeout } from 'utils/transitionUtil';
-import { pagePathMap, pageItems, contactItems, pathPageMap } from 'utils/pageUtils';
+import { animationDuration } from 'utils/transitionUtil';
+import { pagePathMap, pageItems, pathPageMap } from 'utils/pageUtils';
 
 import 'components/sideNavigationBar/sideNavigationBar.css';
 
@@ -52,6 +52,48 @@ const SideBarMenuItems = (props: ISideBarMenuItemsProps) => {
   );
 };
 
+interface ISideBarContactIconProps {
+  iconName: SemanticICONS;
+  href: string;
+};
+
+const SideBarContactIcon = ({ iconName, href }: ISideBarContactIconProps) => (
+  <a
+    target="_blank"
+    rel='noopener noreferrer'
+    href={href}
+  >
+    <Icon name={iconName} size="big" />
+  </a>
+);
+
+const contactInfo: ISideBarContactIconProps[] = [
+  {
+    iconName: 'linkedin',
+    href: 'https://www.linkedin.com/in/jingcheng-zhang/',
+  },
+  {
+    iconName: 'github',
+    href: 'https://github.com/jesse7zhangjc',
+  },
+  {
+    iconName: 'angellist',
+    href: 'https://angel.co/u/jingcheng-zhang',
+  },
+  {
+    iconName: 'mail outline',
+    href: 'mailto:jingcheng.zhang@nyu.edu',
+  },
+];
+
+const SideBarContactIcons = () => (
+  <Container className="contact-icon-container" fluid>
+    <div>
+      {contactInfo.map((info, idx) => <SideBarContactIcon key={idx} {...info} />)}
+    </div>
+  </Container>
+);
+
 const CopyRightFooter = () => (
   <div className="copy-right-footer">
     <p>© 2020 Jingcheng Zhang</p>
@@ -66,7 +108,7 @@ const SideNavigationBar = () => {
   const { pathname } = useLocation();
   pathPageMap[pathname] && activeItem !== pathPageMap[pathname] && setActiveItem(pathPageMap[pathname]);
   setTimeout(() => setShowSidebar(true));
-  setTimeout(() => setShowItems(true), sidebarShowContentTimeout);
+  setTimeout(() => setShowItems(true), animationDuration);
   return (
     <Sidebar animation="push" visible={showSidebar} width="wide">
       <Transition visible={showItems} animation="fade up" duration={500}>
@@ -76,7 +118,7 @@ const SideNavigationBar = () => {
           <Divider horizontal section/>
           <SideBarMenuItems menuItems={pageItems} activeItem={activeItem} setActiveItem={setActiveItem} />
           <Divider horizontal section />
-          <SideBarMenuItems menuItems={contactItems} activeItem={activeItem} />
+          <SideBarContactIcons />
         </Container>
       </Transition>
       <CopyRightFooter />

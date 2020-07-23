@@ -8,6 +8,7 @@ import Education, { IEducationProps } from 'components/mainContent/resumePage/Ed
 import 'components/mainContent/resumePage/resumePage.css'
 import { useTransitionEffect, animationDuration } from 'utils/transitionUtil';
 import { HashLink } from 'react-router-hash-link';
+import { IMainContentProps } from '../MainContent';
 
 const {resumePage: rm} = messages;
 const resumeSubTitles = [
@@ -83,8 +84,10 @@ const EducationSection = () => {
   );
 };
 
-const ResumePage = () => {
-  const showContent = useTransitionEffect();
+type IResumePageProps = IMainContentProps;
+
+const ResumePage = (props: IResumePageProps) => {
+  const showContent = useTransitionEffect(props.sideBarReady ? 0 :animationDuration);
   return (
     <Transition animation="fade right" duration={animationDuration} visible={showContent}>
       <Container className="resume-page">

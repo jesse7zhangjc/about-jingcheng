@@ -49,11 +49,29 @@
   width: 100%;
 }
 
+.sidebar .contact-icon-container > div {
+  display: flex !important;
+  justify-content: space-between;
+  padding-right: 60px;
+}
+
+.sidebar .contact-icon-container a {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.sidebar .contact-icon-container a:hover {
+  color: #FC97DF;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
 .copy-right-footer {
   font-size: 11px;
   position: fixed;
   bottom: 30px;
 }
+
+
 
 .copy-right-footer p {
   margin-bottom: 0;

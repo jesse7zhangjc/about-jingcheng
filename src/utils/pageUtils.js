@@ -6,17 +6,14 @@ const { sideNavigationBar: snbm } = messages;
 export const pageItems = [
   snbm.home,
   snbm.about,
+  snbm.projects,
   snbm.resume,
-];
-
-export const contactItems = [
-  snbm.linkedIn,
-  snbm.email,
 ];
 
 export const pagePathMap = {
   [snbm.home]: '/',
   [snbm.about]: '/about',
+  [snbm.projects]: '/projects',
   [snbm.resume]: '/resume',
 };
 
