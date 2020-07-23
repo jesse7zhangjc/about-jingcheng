@@ -27,6 +27,10 @@
   color: #FC97DF;
 }
 
+.sidebar .menu .item {
+  width: fit-content;
+}
+
 .sidebar .menu .item.active span {
   border-bottom: 3px solid #FC97DF;
 }
