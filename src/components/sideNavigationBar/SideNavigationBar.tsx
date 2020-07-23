@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
-import { Sidebar, Menu, Divider } from 'semantic-ui-react';
-import messages from 'messages/messages';
+import { Sidebar, Menu, Divider, Transition, Container } from 'semantic-ui-react';
+import { useHistory, useLocation } from 'react-router-dom'
+
+
+import { sidebarShowContentTimeout } from 'utils/transitionUtil';
+import { pagePathMap, pageItems, contactItems } from 'utils/pageUtils';
+
 import 'components/sideNavigationBar/sideNavigationBar.css';
 
-const { sideNavigationBar: snbm } = messages;
-const pageItems = [
-  snbm.home,
-  snbm.about,
-];
-const contactItems = [
-  snbm.resume,
-  snbm.linkedIn,
-  snbm.email,
-];
+
+
 
 const SideBarHeader = () => (
   <Menu.Header>
@@ -22,44 +19,61 @@ const SideBarHeader = () => (
   </Menu.Header>
 );
 
-interface ISideBarMenuItem {
+interface ISideBarMenuItemsProps {
   menuItems: string[];
   activeItem?: string;
   setActiveItem?: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const SideBarMenuItems = (props: ISideBarMenuItem) => {
-  const onClickMenuItem = (item: string) => props.setActiveItem && item && props.setActiveItem(item)
+const SideBarMenuItems = (props: ISideBarMenuItemsProps) => {
+  const history = useHistory();
+  const { pathname } = useLocation();
+  const goToPage = (item: string) => pagePathMap[item] && pathname !== pagePathMap[item] && history.push(pagePathMap[item]);
+  const getMenuItem = (item: string) => {
+    const onClick = () => {
+      if (props.setActiveItem && item) {
+        props.setActiveItem(item);
+        goToPage(item);
+      }
+    };
+    return (
+      <Menu.Item
+        content={<span>{item}</span>}
+        key={item}
+        active={item === props.activeItem}
+        onClick={onClick}
+      />
+    );
+  };
   return (
     <Menu vertical fluid text size='massive'>
-      {props.menuItems.map(
-        item => (
-          <Menu.Item
-            content={<span>{item}</span>}
-            key={item}
-            active={item === props.activeItem}
-            onClick={() => onClickMenuItem(item)}
-          />
-        )
-      )}
+      {props.menuItems.map(getMenuItem)}
     </Menu>
   );
 };
 
-interface ISideNavigationBarProps {
-  visible: boolean,
-};
-
-export const SideNavigationBar = (props: ISideNavigationBarProps) => {
+const SideNavigationBar = () => {
   const [activeItem, setActiveItem] = useState(pageItems[0]);
+  const [showSidebar, setShowSidebar] = useState(false);
+  const [showItems, setShowItems] = useState(false);
+  setTimeout(() => setShowSidebar(true));
+  setTimeout(() => setShowItems(true), sidebarShowContentTimeout);
   return (
-    <Sidebar animation="push" visible={props.visible} width="wide">
-      <Divider className="top-divider" horizontal section />
-      <SideBarHeader />
-      <Divider horizontal section/>
-      <SideBarMenuItems menuItems={pageItems} activeItem={activeItem} setActiveItem={setActiveItem} />
-      <Divider horizontal section />
-      <SideBarMenuItems menuItems={contactItems} activeItem={activeItem} />
+    <Sidebar animation="push" visible={showSidebar} width="wide">
+      <Transition visible={showItems} animation="fade up" duration={500}>
+        <Container fluid>
+          <Divider className="top-divider" horizontal section />
+          <SideBarHeader />
+          <Divider horizontal section/>
+          <SideBarMenuItems menuItems={pageItems} activeItem={activeItem} setActiveItem={setActiveItem} />
+          <Divider horizontal section />
+          <SideBarMenuItems menuItems={contactItems} activeItem={activeItem} />
+        </Container>
+      </Transition>
     </Sidebar>
   );
 };
+
+
+
+export default SideNavigationBar;

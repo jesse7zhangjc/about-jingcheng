@@ -1,0 +1,9 @@
+.home-page .ui.section.divider.top-divider {
+  margin-top: 15rem;
+}
+
+.home-page-content-container {
+  padding-left: 7rem;
+  padding-right: 7rem;
+  margin: 0;
+}

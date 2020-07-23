@@ -1,8 +1,12 @@
+#root {
+  height: 100vh;
+}
+
 .sidebar {
   padding-left: 60px;
 }
 
-.ui.section.divider.top-divider {
+.sidebar .ui.section.divider.top-divider {
   margin-top: 7rem; 
 }
 
