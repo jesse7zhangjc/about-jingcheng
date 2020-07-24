@@ -1,9 +1,9 @@
-.projects-page.ui.container {
+.stats-page.ui.container {
   padding-left: 5rem;
   padding-right: 5rem;
 }
 
-.projects-title {
+.stats-title {
   font-weight: bolder !important;
   letter-spacing: 3px;
 }

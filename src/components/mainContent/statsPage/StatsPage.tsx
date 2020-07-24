@@ -1,50 +1,66 @@
 import React from 'react';
-import { Container, Header, Divider, Transition, Item } from 'semantic-ui-react';
+import { Container, Header, Divider, Transition, Statistic, Loader, Message } from 'semantic-ui-react';
 
 import messages from 'messages/messages';
+import { useRepoStatus, IRepoStatus } from 'apis/github';
 import { useTransitionEffect, animationDuration } from 'utils/transitionUtil';
 import { IMainContentProps } from 'components/mainContent/MainContent';
-import ProjectItem, { IProject } from 'components/mainContent/projectsPage/Project';
 
-import 'components/mainContent/projectsPage/projectsPage.css'
+import 'components/mainContent/statsPage/statsPage.css'
 
-const { projectsPage: pm } = messages;
-const dummyProject = {
-  name: 'About | Jingcheng',
-  date: 'July, 2020',
-  sourceHref: 'https://github.com/jesse7zhangjc/about-jingcheng',
-  projectHref: 'https://jesse7zhangjc.github.io/about-jingcheng',
-  desc: 'A simple personal website built from scratch with React',
-  imgSrc: 'assets/images/projects/aboutJingchengPreview.png',
-  stack: ['React', 'Semantic UI React']
-};
-const projectList: IProject[] = [
-  dummyProject,
-  dummyProject,
-  dummyProject,
-  dummyProject,
-];
+const { statsPage: spm } = messages;
 
-const ProjectsContent = () => {
+// TODO: redesign this section
+const StatsSection = () => {
+  const [repoStatus, isLoading] = useRepoStatus() as [IRepoStatus, (boolean | undefined)];
+  if (isLoading === undefined) {
+    return null;
+  }
+
+  if (isLoading) {
+    return (
+      <Statistic.Group size="small">
+        <Statistic value={<Loader active inline />} label="Lines" />
+        <Statistic value={<Loader active inline />} label="Forks" />
+        <Statistic value={<Loader active inline />} label="Stargazers" />
+        <Statistic value={<Loader active inline />} label="Subscribers" />
+        <Statistic value={<Loader active inline />} label="Watchers" />
+        <Statistic value={<Loader active inline />} label="Updated at" />
+      </Statistic.Group>
+    );
+  }
+
+  if (!repoStatus && !isLoading) {
+    return (
+      <Message negative>
+        <Message.Header>Cannot fetch repo status data</Message.Header>
+      </Message>
+    );
+  }
   return (
-    <Item.Group divided>
-      {projectList.map((project, index) => <ProjectItem key={index} index={index + 1} project={project} />)}
-    </Item.Group>
+    <Statistic.Group size="tiny">
+      <Statistic value={repoStatus.size.toLocaleString()} label="Lines" />
+      <Statistic value={repoStatus.forks_count.toLocaleString()} label="Forks" />
+      <Statistic value={repoStatus.stargazers_count.toLocaleString()} label="Stargazers" />
+      <Statistic value={repoStatus.subscribers_count.toLocaleString()} label="Subscribers" />
+      <Statistic value={repoStatus.watchers_count.toLocaleString()} label="Watchers" />
+      <Statistic value={repoStatus.updated_at} label="Updated at" />
+    </Statistic.Group>
   );
-};
+}
 
-type IProjectsPageProps = IMainContentProps;
+type IStatsPageProps = IMainContentProps;
 
-const StatsPage = (props: IProjectsPageProps) => {
+const StatsPage = (props: IStatsPageProps) => {
   const showContent = useTransitionEffect(props.sideBarReady ? 0 :animationDuration);
   return (
     <Transition animation="fade right" duration={animationDuration} visible={showContent}>
-      <Container className="projects-page">
+      <Container className="stats-page">
         <Divider section hidden />
-        <Header className="projects-title" size="huge">{pm.projects}</Header>
+        <Header className="stats-title" size="huge">{spm.stats}</Header>
         <Divider hidden />
         <Divider />
-        <ProjectsContent />
+        <StatsSection />
       </Container>
     </Transition>
   );

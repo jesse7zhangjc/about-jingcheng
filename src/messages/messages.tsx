@@ -1,9 +1,10 @@
-import { sideNavigationBar, resumePage, projectsPage } from 'messages/i18n/en';
+import { sideNavigationBar, resumePage, projectsPage, statsPage } from 'messages/i18n/en';
 
 const messages = {
     sideNavigationBar,
     resumePage,
     projectsPage,
+    statsPage,
 }
 
 export default messages;
