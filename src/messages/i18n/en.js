@@ -5,6 +5,7 @@ export const sideNavigationBar = {
   linkedIn: 'LinkedIn',
   email: 'Email',
   projects: 'Projects',
+  stats: 'Stats'
 };
 
 export const resumePage = {
@@ -13,9 +14,13 @@ export const resumePage = {
   education: 'EDUCATION',
   skills: 'SKILLS',
   courses: 'COURSES',
-}
+};
 
 export const projectsPage = {
   projects: 'PROJECTS',
   aboutJingcheng: 'About | Jingcheng',
-}
+};
+
+export const statsPage = {
+  stats: 'STATS',
+};
