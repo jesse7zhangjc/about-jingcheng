@@ -32,7 +32,7 @@
 }
 
 .sidebar .menu .item.active span {
-  border-bottom: 3px solid #FC97DF;
+  border-bottom: 3px solid #FB9DDF;
 }
 
 .sidebar .menu .item:not(.active) span {
@@ -42,7 +42,7 @@
 .sidebar .menu .item:not(.active) span:after {
   content: '';
   display: block;
-  border-bottom: 3px solid #FC97DF;
+  border-bottom: 3px solid #FB9DDF;
   width: 0;
   position: absolute;
   left: 0;
@@ -66,7 +66,7 @@
 }
 
 .sidebar .contact-icon-container a:hover {
-  color: #FC97DF;
+  color: #FB9DDF;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }

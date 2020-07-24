@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Header, Divider, Transition, Item } from 'semantic-ui-react';
+import { Container, Header, Divider, Transition, Item, Image } from 'semantic-ui-react';
 
 import messages from 'messages/messages';
 import { useTransitionEffect, animationDuration } from 'utils/transitionUtil';
@@ -16,7 +16,7 @@ const dummyProject = {
   projectHref: 'https://github.com/jesse7zhangjc/about-jingcheng',
   desc: 'A simple personal website built from scratch with React',
   imgSrc: '/assets/images/projects/aboutJingchengPreview.png',
-  stack: ['React', 'Semantic UI']
+  stack: ['React', 'Semantic UI React']
 };
 const projectList: IProject[] = [
   dummyProject,
