@@ -1,6 +1,8 @@
 import React from 'react';
 import { Item, Statistic, Icon } from 'semantic-ui-react';
 
+import { getCorrectDevAssetsPath } from 'utils/devEnvAssetsPathUtil';
+
 export interface IProject {
   projectHref: string,
   sourceHref?: string,
@@ -35,7 +37,7 @@ const ProjectItem = ({ project, index }: IProjectItemProps) => {
         {projectStackSection}
         {projectSourceSection}
       </Item.Content>
-      <Item.Image src={project.imgSrc} size="big" as="a" target="_blank" rel="noopener noreferrer" href={project.projectHref} />
+      <Item.Image src={getCorrectDevAssetsPath(project.imgSrc)} size="big" as="a" target="_blank" rel="noopener noreferrer" href={project.projectHref} />
     </Item>
   );
 };

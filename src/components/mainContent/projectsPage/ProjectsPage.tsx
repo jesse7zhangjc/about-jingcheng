@@ -16,7 +16,7 @@ const dummyProject = {
   projectHref: 'https://jesse7zhangjc.github.io/about-jingcheng',
   desc: 'A simple personal website built from scratch with React',
   imgSrc: 'assets/images/projects/aboutJingchengPreview.png',
-  stack: ['React', 'Semantic UI React']
+  stack: ['React', 'TypeScript', 'Semantic UI React'],
 };
 const projectList: IProject[] = [
   dummyProject,
