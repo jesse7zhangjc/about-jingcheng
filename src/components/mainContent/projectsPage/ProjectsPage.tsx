@@ -13,7 +13,7 @@ const dummyProject = {
   name: 'About | Jingcheng',
   date: 'July, 2020',
   sourceHref: 'https://github.com/jesse7zhangjc/about-jingcheng',
-  projectHref: 'https://github.com/jesse7zhangjc/about-jingcheng',
+  projectHref: 'https://jesse7zhangjc.github.io/about-jingcheng',
   desc: 'A simple personal website built from scratch with React',
   imgSrc: 'assets/images/projects/aboutJingchengPreview.png',
   stack: ['React', 'Semantic UI React']
