@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/about-jingcheng/static/css/main.2bd7f39d.chunk.css",
-    "main.js": "/about-jingcheng/static/js/main.4764c8a2.chunk.js",
-    "main.js.map": "/about-jingcheng/static/js/main.4764c8a2.chunk.js.map",
+    "main.js": "/about-jingcheng/static/js/main.71049d16.chunk.js",
+    "main.js.map": "/about-jingcheng/static/js/main.71049d16.chunk.js.map",
     "runtime-main.js": "/about-jingcheng/static/js/runtime-main.976a6697.js",
     "runtime-main.js.map": "/about-jingcheng/static/js/runtime-main.976a6697.js.map",
     "static/css/2.74cf14bc.chunk.css": "/about-jingcheng/static/css/2.74cf14bc.chunk.css",
     "static/js/2.2fbdcf0a.chunk.js": "/about-jingcheng/static/js/2.2fbdcf0a.chunk.js",
     "static/js/2.2fbdcf0a.chunk.js.map": "/about-jingcheng/static/js/2.2fbdcf0a.chunk.js.map",
     "index.html": "/about-jingcheng/index.html",
-    "precache-manifest.bd5c237588b1fe919d51a2a586c0619c.js": "/about-jingcheng/precache-manifest.bd5c237588b1fe919d51a2a586c0619c.js",
+    "precache-manifest.dfae492b268670d0a1e10aee29d6bcce.js": "/about-jingcheng/precache-manifest.dfae492b268670d0a1e10aee29d6bcce.js",
     "service-worker.js": "/about-jingcheng/service-worker.js",
     "static/css/2.74cf14bc.chunk.css.map": "/about-jingcheng/static/css/2.74cf14bc.chunk.css.map",
     "static/css/main.2bd7f39d.chunk.css.map": "/about-jingcheng/static/css/main.2bd7f39d.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.74cf14bc.chunk.css",
     "static/js/2.2fbdcf0a.chunk.js",
     "static/css/main.2bd7f39d.chunk.css",
-    "static/js/main.4764c8a2.chunk.js"
+    "static/js/main.71049d16.chunk.js"
   ]
 }
