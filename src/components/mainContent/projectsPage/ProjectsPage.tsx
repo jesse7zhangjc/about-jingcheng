@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Header, Divider, Transition, Item, Image } from 'semantic-ui-react';
+import { Container, Header, Divider, Transition, Item } from 'semantic-ui-react';
 
 import messages from 'messages/messages';
 import { useTransitionEffect, animationDuration } from 'utils/transitionUtil';

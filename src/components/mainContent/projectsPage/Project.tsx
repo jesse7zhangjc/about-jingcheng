@@ -21,7 +21,7 @@ const ProjectItem = ({ project, index }: IProjectItemProps) => {
     project.stack.length > 0 &&
     <Item.Extra className="project-item-stack">{`Stack: ${project.stack.join(', ')}`}</Item.Extra>;
   const projectSourceSection = project.sourceHref &&
-    <Item.Extra className="project-item-stack" as="a" href="project.sourceHref" target='_blank' rel="noopener noreferrer">
+    <Item.Extra className="project-item-stack" as="a" href={project.sourceHref} target='_blank' rel="noopener noreferrer">
       <Icon name="github"/>
       <span>Source code</span>
     </Item.Extra>;
