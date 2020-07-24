@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/about-jingcheng/static/css/main.2bd7f39d.chunk.css",
+    "main.js": "/about-jingcheng/static/js/main.abb4df07.chunk.js",
+    "main.js.map": "/about-jingcheng/static/js/main.abb4df07.chunk.js.map",
+    "runtime-main.js": "/about-jingcheng/static/js/runtime-main.976a6697.js",
+    "runtime-main.js.map": "/about-jingcheng/static/js/runtime-main.976a6697.js.map",
+    "static/css/2.74cf14bc.chunk.css": "/about-jingcheng/static/css/2.74cf14bc.chunk.css",
+    "static/js/2.2fbdcf0a.chunk.js": "/about-jingcheng/static/js/2.2fbdcf0a.chunk.js",
+    "static/js/2.2fbdcf0a.chunk.js.map": "/about-jingcheng/static/js/2.2fbdcf0a.chunk.js.map",
+    "index.html": "/about-jingcheng/index.html",
+    "precache-manifest.dcb03cde51b29140cd8a4c3c18bd6037.js": "/about-jingcheng/precache-manifest.dcb03cde51b29140cd8a4c3c18bd6037.js",
+    "service-worker.js": "/about-jingcheng/service-worker.js",
+    "static/css/2.74cf14bc.chunk.css.map": "/about-jingcheng/static/css/2.74cf14bc.chunk.css.map",
+    "static/css/main.2bd7f39d.chunk.css.map": "/about-jingcheng/static/css/main.2bd7f39d.chunk.css.map",
+    "static/js/2.2fbdcf0a.chunk.js.LICENSE.txt": "/about-jingcheng/static/js/2.2fbdcf0a.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/about-jingcheng/static/media/outline-icons.ef60a4f6.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.976a6697.js",
+    "static/css/2.74cf14bc.chunk.css",
+    "static/js/2.2fbdcf0a.chunk.js",
+    "static/css/main.2bd7f39d.chunk.css",
+    "static/js/main.abb4df07.chunk.js"
+  ]
+}
