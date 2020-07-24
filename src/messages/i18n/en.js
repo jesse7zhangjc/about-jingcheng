@@ -14,3 +14,8 @@ export const resumePage = {
   skills: 'SKILLS',
   courses: 'COURSES',
 }
+
+export const projectsPage = {
+  projects: 'PROJECTS',
+  aboutJingcheng: 'About | Jingcheng',
+}

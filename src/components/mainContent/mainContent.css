@@ -7,4 +7,5 @@
   min-width: 650px;
   height: 100vh;
   overflow: auto;
+  padding-bottom: 3rem;
 }

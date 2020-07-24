@@ -16,7 +16,7 @@ const HomePage = (props: IHomePageProps) => {
         <Divider section hidden className="top-divider" />
         <Container className="home-page-content-container" textAlign="justified">
           <Header size="large">Hi there, I'm Jingcheng.</Header>
-          <Header size="small">I like building things. I am a NYU graduate and a Software Development Engineer at Amazon Web Services. Before Amazon, I was at Byton, Faraday Future and BYD Coach and Bus building web apps that have improved EV manufacturing experience.</Header>
+          <Header size="small">I like building things. I am a NYU graduate and a Software Development Engineer at Amazon Web Services. Before Amazon, I was at Byton, Faraday Future and BYD Coach and Bus building web apps to improve EV manufacturing experience.</Header>
         </Container>
       </Container>
     </Transition>
