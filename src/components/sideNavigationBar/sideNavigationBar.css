@@ -13,17 +13,17 @@
   margin-top: 7rem; 
 }
 
-.sidebar .header .name,
-.sidebar .header .title {
+.sidebar .header .my-name,
+.sidebar .header .my-title {
   font-size: 20px;
   font-weight: bolder;
 }
 
-.sidebar .header .name {
+.sidebar .header .my-name {
   padding-bottom: 15px;
 }
 
-.sidebar .header .title {
+.sidebar .header .my-title {
   color: #FC97DF;
 }
 

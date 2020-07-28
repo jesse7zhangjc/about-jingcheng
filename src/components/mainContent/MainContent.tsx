@@ -9,6 +9,11 @@ import StatsPage from 'components/mainContent/statsPage/StatsPage';
 import 'components/mainContent/mainContent.css';
 
 export interface IMainContentProps {
+  /**
+   *  This flag is used to tell if the side bar animation is finished already
+   * If so, the content in the MainContent component will show up right away.
+   * Otherwise, the content will wait for the side bar animation, then show itself afterwards.
+   */
   sideBarReady?: boolean;
 };
 

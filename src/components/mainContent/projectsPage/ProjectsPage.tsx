@@ -1,34 +1,19 @@
 import React from 'react';
 import { Container, Header, Divider, Transition, Item } from 'semantic-ui-react';
 
-import messages from 'messages/messages';
+import messages from 'messages';
 import { useTransitionEffect, animationDuration } from 'utils/transitionUtil';
 import { IMainContentProps } from 'components/mainContent/MainContent';
-import ProjectItem, { IProject } from 'components/mainContent/projectsPage/Project';
+import ProjectItem from 'components/mainContent/projectsPage/Project';
 
 import 'components/mainContent/projectsPage/projectsPage.css'
 
-const { projectsPage: pm } = messages;
-const dummyProject = {
-  name: 'About | Jingcheng',
-  date: 'July, 2020',
-  sourceHref: 'https://github.com/jesse7zhangjc/about-jingcheng',
-  projectHref: 'https://jesse7zhangjc.github.io/about-jingcheng',
-  desc: 'A simple personal website built from scratch with React',
-  imgSrc: 'assets/images/projects/aboutJingchengPreview.png',
-  stack: ['React', 'TypeScript', 'Semantic UI React'],
-};
-const projectList: IProject[] = [
-  dummyProject,
-  dummyProject,
-  dummyProject,
-  dummyProject,
-];
+const { projectsPage: pm, content: { projects } } = messages;
 
 const ProjectsContent = () => {
   return (
     <Item.Group divided>
-      {projectList.map((project, index) => <ProjectItem key={index} index={index + 1} project={project} />)}
+      {projects.map((project, index) => <ProjectItem key={index} index={index + 1} project={project} />)}
     </Item.Group>
   );
 };

@@ -8,19 +8,11 @@
   letter-spacing: 3px;
 }
 
-.project-item-index {
-  padding-right: 2rem;
+.about-this-repo-title {
+  letter-spacing: 2px;
 }
 
-.project-item {
-  -webkit-transition: transform 0.2s ease-out !important;
-  transition: transform 0.2s ease-out !important;
-}
-
-.project-item:hover {
-  transform: scale(0.98);
-}
-
-.project-item:hover .project-item-header {
-  color: rgba(0, 0, 0, 0.85) !important;
+.about-this-repo-icon {
+  padding-left: 1rem !important;
+  color: rgba(0, 0, 0, 0.85);
 }

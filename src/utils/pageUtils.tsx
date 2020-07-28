@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import messages from 'messages/messages';
+import messages from 'messages';
 
 const { sideNavigationBar: snbm } = messages;
 enum Page {
@@ -13,9 +13,8 @@ enum Page {
 
 export const pageItems = [
   snbm.home,
-  snbm.about,
-  snbm.projects,
   snbm.resume,
+  snbm.projects,
   snbm.stats,
 ];
 

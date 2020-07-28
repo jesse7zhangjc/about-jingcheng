@@ -2,16 +2,7 @@ import React from 'react';
 import { Item, Statistic, Icon } from 'semantic-ui-react';
 
 import { getCorrectDevAssetsPath } from 'utils/devEnvAssetsPathUtil';
-
-export interface IProject {
-  projectHref: string,
-  sourceHref?: string,
-  name: string,
-  date: string,
-  desc: string,
-  imgSrc: string,
-  stack?: string[],
-};
+import { IProject } from 'textContent/contentTypes';
 
 interface IProjectItemProps {
   project: IProject,

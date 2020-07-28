@@ -5,7 +5,7 @@ export const sideNavigationBar = {
   linkedIn: 'LinkedIn',
   email: 'Email',
   projects: 'Projects',
-  stats: 'Stats'
+  stats: 'Stats',
 };
 
 export const resumePage = {
@@ -23,4 +23,18 @@ export const projectsPage = {
 
 export const statsPage = {
   stats: 'STATS',
+  aboutThisRepo: 'ABOUT THIS REPO',
+  lines: 'Lines',
+  forks: 'Forks',
+  stargazers: 'Stargazers',
+  subscribers: 'Subscribers',
+  watchers: 'Watchers',
+  updated: 'Updated',
+  created: 'Created',
+  repoStatsNotAvailable: 'Repo stats not available',
+};
+
+export const copyRightFooter = {
+  copyRightLine: '© 2020 Jingcheng Zhang',
+  description: 'Built from scratch with React',
 };

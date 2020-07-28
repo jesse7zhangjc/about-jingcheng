@@ -5,17 +5,18 @@ import { useHistory, useLocation } from 'react-router-dom'
 
 import { animationDuration } from 'utils/transitionUtil';
 import { pagePathMap, pageItems, pathPageMap } from 'utils/pageUtils';
+import messages from 'messages';
 
 import 'components/sideNavigationBar/sideNavigationBar.css';
 
-
+const { copyRightFooter: crm, content: { contacts} } = messages;
 
 
 const SideBarHeader = () => (
   <Menu.Header>
-    <div className="name">Jingcheng Zhang</div>
-    <div className="title">Software Engineer</div>
-    <div className="employer">@ Amazon Web Services</div>
+    <div className="my-name">{contacts.fullName}</div>
+    <div className="my-title">{contacts.title}</div>
+    <div className="my-email">{contacts.email}</div>
   </Menu.Header>
 );
 
@@ -70,19 +71,19 @@ const SideBarContactIcon = ({ iconName, href }: ISideBarContactIconProps) => (
 const contactInfo: ISideBarContactIconProps[] = [
   {
     iconName: 'linkedin',
-    href: 'https://www.linkedin.com/in/jingcheng-zhang/',
+    href: contacts.linkedIn,
   },
   {
     iconName: 'github',
-    href: 'https://github.com/jesse7zhangjc',
+    href: contacts.github,
   },
   {
     iconName: 'angellist',
-    href: 'https://angel.co/u/jingcheng-zhang',
+    href: contacts.angellist,
   },
   {
     iconName: 'mail outline',
-    href: 'mailto:jingcheng.zhang@nyu.edu',
+    href: `mailto:${contacts.email}`,
   },
 ];
 
@@ -96,8 +97,8 @@ const SideBarContactIcons = () => (
 
 const CopyRightFooter = () => (
   <div className="copy-right-footer">
-    <p>© 2020 Jingcheng Zhang</p>
-    <p>Built from scratch with React</p>
+    <p>{crm.copyRightLine}</p>
+    <p>{crm.description}</p>
   </div>
 );
 
@@ -106,12 +107,13 @@ const SideNavigationBar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [showItems, setShowItems] = useState(false);
   const { pathname } = useLocation();
+  /** Get active item from path */
   pathPageMap[pathname] && activeItem !== pathPageMap[pathname] && setActiveItem(pathPageMap[pathname]);
   setTimeout(() => setShowSidebar(true));
   setTimeout(() => setShowItems(true), animationDuration);
   return (
     <Sidebar animation="push" visible={showSidebar} width="wide">
-      <Transition visible={showItems} animation="fade up" duration={500}>
+      <Transition visible={showItems} animation="fade up" duration={animationDuration}>
         <Container fluid>
           <Divider className="top-divider" horizontal section />
           <SideBarHeader />
