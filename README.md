@@ -13,7 +13,7 @@ My simple personal website app. Built from scratch using modern javascript with 
 - [TypeScript](https://www.typescriptlang.org/) - Type checking
 - [React Router](https://reactrouter.com/) - Make components navigational
 - [Semantic UI React](https://react.semantic-ui.com/) - React UI framework
-- [Prettier](https://prettier.io/) and [Pre-commit Hook with lint-staged](https://prettier.io/docs/en/precommit.html#option-1-lint-stagedhttpsgithubcomokonetlint-staged) - Code formatting
+- [ESLint](https://eslint.org/), [Prettier](https://prettier.io/) and [Pre-commit Hook with lint-staged](https://prettier.io/docs/en/precommit.html#option-1-lint-stagedhttpsgithubcomokonetlint-staged) - Code formatting
 - [Jest](https://jestjs.io/) and [Enzyme](https://enzymejs.github.io/enzyme/) - Testing
 - [Axios](https://github.com/axios/axios) - Promise based HTTP client
 - [Github RESTful APIs](https://docs.github.com/en/rest/reference/repos#get-a-repository) - Get repo stats
