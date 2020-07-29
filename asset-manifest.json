@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/about-jingcheng/static/css/main.7b8e5038.chunk.css",
-    "main.js": "/about-jingcheng/static/js/main.e762aa35.chunk.js",
-    "main.js.map": "/about-jingcheng/static/js/main.e762aa35.chunk.js.map",
+    "main.css": "/about-jingcheng/static/css/main.54fa4b53.chunk.css",
+    "main.js": "/about-jingcheng/static/js/main.beed1d28.chunk.js",
+    "main.js.map": "/about-jingcheng/static/js/main.beed1d28.chunk.js.map",
     "runtime-main.js": "/about-jingcheng/static/js/runtime-main.976a6697.js",
     "runtime-main.js.map": "/about-jingcheng/static/js/runtime-main.976a6697.js.map",
-    "static/css/2.b1c3fa72.chunk.css": "/about-jingcheng/static/css/2.b1c3fa72.chunk.css",
-    "static/js/2.ea597b3e.chunk.js": "/about-jingcheng/static/js/2.ea597b3e.chunk.js",
-    "static/js/2.ea597b3e.chunk.js.map": "/about-jingcheng/static/js/2.ea597b3e.chunk.js.map",
+    "static/css/2.74cf14bc.chunk.css": "/about-jingcheng/static/css/2.74cf14bc.chunk.css",
+    "static/js/2.74bc1a6e.chunk.js": "/about-jingcheng/static/js/2.74bc1a6e.chunk.js",
+    "static/js/2.74bc1a6e.chunk.js.map": "/about-jingcheng/static/js/2.74bc1a6e.chunk.js.map",
     "index.html": "/about-jingcheng/index.html",
-    "precache-manifest.55a35724b8b64fceba61411744a2c5a6.js": "/about-jingcheng/precache-manifest.55a35724b8b64fceba61411744a2c5a6.js",
+    "precache-manifest.5b52f2a92713f74b95b7e2722c79c246.js": "/about-jingcheng/precache-manifest.5b52f2a92713f74b95b7e2722c79c246.js",
     "service-worker.js": "/about-jingcheng/service-worker.js",
-    "static/css/2.b1c3fa72.chunk.css.map": "/about-jingcheng/static/css/2.b1c3fa72.chunk.css.map",
-    "static/css/main.7b8e5038.chunk.css.map": "/about-jingcheng/static/css/main.7b8e5038.chunk.css.map",
-    "static/js/2.ea597b3e.chunk.js.LICENSE.txt": "/about-jingcheng/static/js/2.ea597b3e.chunk.js.LICENSE.txt",
+    "static/css/2.74cf14bc.chunk.css.map": "/about-jingcheng/static/css/2.74cf14bc.chunk.css.map",
+    "static/css/main.54fa4b53.chunk.css.map": "/about-jingcheng/static/css/main.54fa4b53.chunk.css.map",
+    "static/js/2.74bc1a6e.chunk.js.LICENSE.txt": "/about-jingcheng/static/js/2.74bc1a6e.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/about-jingcheng/static/media/outline-icons.ef60a4f6.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.976a6697.js",
-    "static/css/2.b1c3fa72.chunk.css",
-    "static/js/2.ea597b3e.chunk.js",
-    "static/css/main.7b8e5038.chunk.css",
-    "static/js/main.e762aa35.chunk.js"
+    "static/css/2.74cf14bc.chunk.css",
+    "static/js/2.74bc1a6e.chunk.js",
+    "static/css/main.54fa4b53.chunk.css",
+    "static/js/main.beed1d28.chunk.js"
   ]
 }
