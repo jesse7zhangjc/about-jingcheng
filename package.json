@@ -31,7 +31,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "lint": "eslint './**/*.{ts,tsx,js,jsx}'",
     "predeploy": "react-scripts test --watchAll=false && react-scripts build",
     "deploy": "gh-pages -d build"
   },
