@@ -6,6 +6,7 @@ import messages from 'messages';
 import { IMainContentProps } from 'components/mainContent/MainContent';
 
 import 'components/mainContent/homePage/homePage.css';
+import ProjectsPage from 'components/mainContent/projectsPage/ProjectsPage';
 
 const { welcome: wm } = messages.content;
 
@@ -21,6 +22,8 @@ const HomePage = (props: IHomePageProps) => {
           <Header size="large">{wm.header}</Header>
           <Header size="small">{wm.subheader}</Header>
         </Container>
+        <Divider hidden section className="top-divider" />
+        <ProjectsPage />
       </Container>
     </Transition>
   );
