@@ -1,3 +1,6 @@
+// This is more like a config file that allows you to update the content that is showing on the app
+// Might consider changing it to a json config file in the future
+
 import { IEducation, IExperience, IProject } from 'textContent/contentTypes';
 
 const welcome = {
