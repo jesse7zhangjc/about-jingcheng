@@ -6,7 +6,7 @@ import { useTransitionEffect, animationDuration } from 'utils/transitionUtil';
 import { IMainContentProps } from 'components/mainContent/MainContent';
 
 import 'components/mainContent/statsPage/statsPage.css'
-import AboutThisRepoSection from './AboutThisRepoSection';
+import AboutThisRepoSection from 'components/mainContent/statsPage/AboutThisRepoSection';
 
 const { sideNavigationBar: sbm, statsPage: spm, content: { contacts } } = messages;
 

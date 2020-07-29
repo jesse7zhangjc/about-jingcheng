@@ -8,7 +8,7 @@ import Education from 'components/mainContent/resumePage/Education';
 import 'components/mainContent/resumePage/resumePage.css'
 import { useTransitionEffect, animationDuration } from 'utils/transitionUtil';
 import { HashLink } from 'react-router-hash-link';
-import { IMainContentProps } from '../MainContent';
+import { IMainContentProps } from 'components/mainContent/MainContent';
 
 const { sideNavigationBar: sbm, resumePage: rm, content: { experiences, educations, contacts } } = messages;
 const resumeSubTitles = [
