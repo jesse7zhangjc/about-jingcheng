@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import {
   Sidebar,
   Menu,
@@ -63,6 +64,12 @@ const SideBarMenuItems = (props: ISideBarMenuItemsProps) => {
       {props.menuItems.map(getMenuItem)}
     </Menu>
   );
+};
+
+SideBarMenuItems.propTypes = {
+  menuItems: PropTypes.arrayOf(PropTypes.string).isRequired,
+  activeItem: PropTypes.string,
+  setActiveItem: PropTypes.func,
 };
 
 interface ISideBarContactIconProps {

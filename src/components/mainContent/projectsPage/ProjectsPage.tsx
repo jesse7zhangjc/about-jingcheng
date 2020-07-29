@@ -43,7 +43,6 @@ const ProjectsPage = (props: IProjectsPageProps) => {
     if (!props.isOnHomePage) {
       document.title = `${sbm.projects} | ${contacts.fullName}`;
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <Transition

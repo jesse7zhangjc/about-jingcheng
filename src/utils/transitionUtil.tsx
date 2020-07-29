@@ -6,15 +6,11 @@ export const animationDuration = 500;
 /** Hook for animation */
 export const useTransitionEffect = (timeout?: number) => {
   const [showContent, setShowContent] = useState(false);
-  useEffect(
-    () => {
-      !showContent &&
-        setTimeout(() => {
-          setShowContent(true);
-        }, timeout || 0);
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    []
-  );
+  useEffect(() => {
+    !showContent &&
+      setTimeout(() => {
+        setShowContent(true);
+      }, timeout || 0);
+  }, []);
   return showContent;
 };
