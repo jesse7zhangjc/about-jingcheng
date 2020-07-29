@@ -1,4 +1,22 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### jesse7zhangjc.github.io/about-jingcheng
+
+My simple personal website app. Built from scratch using modern javascript with Node.js, React, TypeScript, Semantic UI and many other technologies. It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This web app can be easily modified and deployed to Github Pages.
+
+## Setup
+
+### More deailts about setup coming soon...
+
+## Tech Stack
+
+- [Create React App](https://github.com/facebook/create-react-app) - Bootstrap the app quickly
+- [React Function Components and Hooks](https://reactjs.org/docs/hooks-state.html#hooks-and-function-components) - Reusable logic (and components of course)
+- [TypeScript](https://www.typescriptlang.org/) - Type checking
+- [React Router](https://reactrouter.com/) - Make components navigational
+- [Semantic UI React](https://react.semantic-ui.com/) - React UI framework
+- [Prettier](https://prettier.io/) and [Pre-commit Hook with lint-staged](https://prettier.io/docs/en/precommit.html#option-1-lint-stagedhttpsgithubcomokonetlint-staged) - Code formatting
+- [Enzyme](https://enzymejs.github.io/enzyme/) - Testing
+- [Axios](https://github.com/axios/axios) - Promise based HTTP client
+- [Github RESTful APIs](https://docs.github.com/en/rest/reference/repos#get-a-repository) - Get repo stats
 
 ## Available Scripts
 
@@ -15,7 +33,6 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -25,20 +42,11 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm run predeploy`
 
-### `npm run eject`
+Launches the tests and then builds the app for production. It's a combination of `npm test` and `npm run build`.<br />
+If any of the tests failed, the predployment will be stopped.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `npm run deploy`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Runs the predeployment mentioned above and then deploys it to Github Pages.
