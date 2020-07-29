@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Header, Divider, Transition, Item } from 'semantic-ui-react';
 
 import messages from 'messages';
@@ -8,7 +8,7 @@ import ProjectItem from 'components/mainContent/projectsPage/Project';
 
 import 'components/mainContent/projectsPage/projectsPage.css'
 
-const { projectsPage: pm, content: { projects } } = messages;
+const { sideNavigationBar: sbm, projectsPage: pm, content: { projects, contacts } } = messages;
 
 const ProjectsContent = () => {
   return (
@@ -18,10 +18,19 @@ const ProjectsContent = () => {
   );
 };
 
-type IProjectsPageProps = IMainContentProps;
+interface IProjectsPageProps extends IMainContentProps {
+  /** Use this flag to decide if we want to update the page title to Project */
+  isOnHomePage: boolean;
+}
 
 const ProjectsPage = (props: IProjectsPageProps) => {
   const showContent = useTransitionEffect(props.sideBarReady ? 0 :animationDuration);
+  useEffect(() => {
+    if (!props.isOnHomePage) {
+      document.title = `${sbm.projects} | ${contacts.fullName}`;
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <Transition animation="fade right" duration={animationDuration} visible={showContent}>
       <Container className="projects-page">

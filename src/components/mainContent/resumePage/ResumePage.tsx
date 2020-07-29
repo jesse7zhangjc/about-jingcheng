@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Header, Divider, Transition } from 'semantic-ui-react';
 
 import messages from 'messages';
@@ -10,7 +10,7 @@ import { useTransitionEffect, animationDuration } from 'utils/transitionUtil';
 import { HashLink } from 'react-router-hash-link';
 import { IMainContentProps } from '../MainContent';
 
-const { resumePage: rm, content: { experiences, educations } } = messages;
+const { sideNavigationBar: sbm, resumePage: rm, content: { experiences, educations, contacts } } = messages;
 const resumeSubTitles = [
   rm.experience,
   rm.education,
@@ -60,6 +60,9 @@ type IResumePageProps = IMainContentProps;
 
 const ResumePage = (props: IResumePageProps) => {
   const showContent = useTransitionEffect(props.sideBarReady ? 0 :animationDuration);
+  useEffect(() => {
+    document.title = `${sbm.resume} | ${contacts.fullName}`;
+  }, [])
   return (
     <Transition animation="fade right" duration={animationDuration} visible={showContent}>
       <Container className="resume-page">

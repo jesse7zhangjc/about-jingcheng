@@ -23,7 +23,7 @@ const MainContent = (props: IMainContentProps) => {
       <Switch>
         <Route exact path="/"><HomePage {...props} /></Route>
         <Route exact path="/resume"><ResumePage {...props} /></Route>
-        <Route exact path="/projects"><ProjectsPage {...props} /></Route>
+        <Route exact path="/projects"><ProjectsPage {...props} isOnHomePage={false}/></Route>
         <Route exact path="/stats"><StatsPage {...props} /></Route>
       </Switch>
     </div>
