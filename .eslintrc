@@ -13,9 +13,9 @@
     "jest": true
   },
   "rules": {
-    "prettier/prettier": ["error"],
+    "prettier/prettier": "warn",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "no-console": ["warn"]
+    "no-console": "warn"
   },
   "settings": {
     "react": {

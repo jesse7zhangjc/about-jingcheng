@@ -43,6 +43,9 @@ const ProjectsPage = (props: IProjectsPageProps) => {
     if (!props.isOnHomePage) {
       document.title = `${sbm.projects} | ${contacts.fullName}`;
     }
+    // Disable warnings for missing dependencies in useEffect
+    // More details: https://github.com/facebook/create-react-app/issues/6880#issuecomment-485912528
+    // eslint-disable-next-line
   }, []);
   return (
     <Transition
