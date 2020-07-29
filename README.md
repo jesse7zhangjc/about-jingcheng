@@ -1,4 +1,4 @@
-### jesse7zhangjc.github.io/about-jingcheng
+### [jesse7zhangjc.github.io/about-jingcheng](jesse7zhangjc.github.io/about-jingcheng)
 
 My simple personal website app. Built from scratch using modern javascript with Node.js, React, TypeScript, Semantic UI and many other technologies. It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This web app can be easily modified and deployed to Github Pages.
 
