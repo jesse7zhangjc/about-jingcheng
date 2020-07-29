@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
-import { Sidebar, Menu, Divider, Transition, Container, Icon, SemanticICONS } from 'semantic-ui-react';
-import { useHistory, useLocation } from 'react-router-dom'
-
+import {
+  Sidebar,
+  Menu,
+  Divider,
+  Transition,
+  Container,
+  Icon,
+  SemanticICONS,
+} from 'semantic-ui-react';
+import { useHistory, useLocation } from 'react-router-dom';
 
 import { animationDuration } from 'utils/transitionUtil';
 import { pagePathMap, pageItems, pathPageMap } from 'utils/pageUtils';
@@ -9,8 +16,10 @@ import messages from 'messages';
 
 import 'components/sideNavigationBar/sideNavigationBar.css';
 
-const { copyRightFooter: crm, content: { contacts} } = messages;
-
+const {
+  copyRightFooter: crm,
+  content: { contacts },
+} = messages;
 
 const SideBarHeader = () => (
   <Menu.Header>
@@ -29,7 +38,10 @@ interface ISideBarMenuItemsProps {
 const SideBarMenuItems = (props: ISideBarMenuItemsProps) => {
   const history = useHistory();
   const { pathname } = useLocation();
-  const goToPage = (item: string) => pagePathMap[item] && pathname !== pagePathMap[item] && history.push(pagePathMap[item]);
+  const goToPage = (item: string) =>
+    pagePathMap[item] &&
+    pathname !== pagePathMap[item] &&
+    history.push(pagePathMap[item]);
   const getMenuItem = (item: string) => {
     const onClick = () => {
       if (props.setActiveItem && item) {
@@ -47,7 +59,7 @@ const SideBarMenuItems = (props: ISideBarMenuItemsProps) => {
     );
   };
   return (
-    <Menu vertical fluid text size='massive'>
+    <Menu vertical fluid text size="massive">
       {props.menuItems.map(getMenuItem)}
     </Menu>
   );
@@ -56,14 +68,10 @@ const SideBarMenuItems = (props: ISideBarMenuItemsProps) => {
 interface ISideBarContactIconProps {
   iconName: SemanticICONS;
   href: string;
-};
+}
 
 const SideBarContactIcon = ({ iconName, href }: ISideBarContactIconProps) => (
-  <a
-    target="_blank"
-    rel='noopener noreferrer'
-    href={href}
-  >
+  <a target="_blank" rel="noopener noreferrer" href={href}>
     <Icon name={iconName} size="big" />
   </a>
 );
@@ -90,7 +98,9 @@ const contactInfo: ISideBarContactIconProps[] = [
 const SideBarContactIcons = () => (
   <Container className="contact-icon-container" fluid>
     <div>
-      {contactInfo.map((info, idx) => <SideBarContactIcon key={idx} {...info} />)}
+      {contactInfo.map((info, idx) => (
+        <SideBarContactIcon key={idx} {...info} />
+      ))}
     </div>
   </Container>
 );
@@ -108,17 +118,27 @@ const SideNavigationBar = () => {
   const [showItems, setShowItems] = useState(false);
   const { pathname } = useLocation();
   /** Get active item from path */
-  pathPageMap[pathname] && activeItem !== pathPageMap[pathname] && setActiveItem(pathPageMap[pathname]);
+  pathPageMap[pathname] &&
+    activeItem !== pathPageMap[pathname] &&
+    setActiveItem(pathPageMap[pathname]);
   setTimeout(() => setShowSidebar(true));
   setTimeout(() => setShowItems(true), animationDuration);
   return (
     <Sidebar animation="push" visible={showSidebar} width="wide">
-      <Transition visible={showItems} animation="fade up" duration={animationDuration}>
+      <Transition
+        visible={showItems}
+        animation="fade up"
+        duration={animationDuration}
+      >
         <Container fluid>
           <Divider className="top-divider" horizontal section />
           <SideBarHeader />
-          <Divider horizontal section/>
-          <SideBarMenuItems menuItems={pageItems} activeItem={activeItem} setActiveItem={setActiveItem} />
+          <Divider horizontal section />
+          <SideBarMenuItems
+            menuItems={pageItems}
+            activeItem={activeItem}
+            setActiveItem={setActiveItem}
+          />
           <Divider horizontal section />
           <SideBarContactIcons />
         </Container>
@@ -127,7 +147,5 @@ const SideNavigationBar = () => {
     </Sidebar>
   );
 };
-
-
 
 export default SideNavigationBar;

@@ -25,7 +25,7 @@ export interface IRepoStatus {
   [RepoStatusKey.SIZE]: number;
   [RepoStatusKey.UPDATED_AT]: string;
   [RepoStatusKey.CREATED_AT]: string;
-};
+}
 
 /** Github repo status hook */
 export const useRepoStatus = () => {
@@ -39,7 +39,7 @@ export const useRepoStatus = () => {
         const newRepoStatus = await axios.get(getRepoStatusUrl);
         setRepoStatus(newRepoStatus.data);
         setIsLoading(false);
-      } catch(err) {
+      } catch (err) {
         setRetriesLeft(retriesLeft - 1);
         setIsLoading(undefined);
       }

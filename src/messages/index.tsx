@@ -3,7 +3,7 @@ import {
   resumePage,
   projectsPage,
   statsPage,
-  copyRightFooter
+  copyRightFooter,
 } from 'messages/i18n/en';
 import { content } from 'textContent/content';
 
@@ -14,6 +14,6 @@ const messages = {
   statsPage,
   copyRightFooter,
   content,
-}
+};
 
 export default messages;

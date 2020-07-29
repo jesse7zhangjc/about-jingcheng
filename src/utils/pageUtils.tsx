@@ -9,14 +9,9 @@ enum Page {
   Projects = '/projects',
   Resume = '/resume',
   Stats = '/stats',
-};
+}
 
-export const pageItems = [
-  snbm.home,
-  snbm.resume,
-  snbm.projects,
-  snbm.stats,
-];
+export const pageItems = [snbm.home, snbm.resume, snbm.projects, snbm.stats];
 
 export const pagePathMap = {
   [snbm.home]: Page.Home,

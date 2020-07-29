@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import { Divider, Header, Statistic, Grid, Loader, Message, Icon } from 'semantic-ui-react';
+import {
+  Divider,
+  Header,
+  Statistic,
+  Grid,
+  Loader,
+  Message,
+  Icon,
+} from 'semantic-ui-react';
 import moment from 'moment';
 
 import { useRepoStatus, IRepoStatus, RepoStatusKey } from 'apis/github';
@@ -12,7 +20,9 @@ interface IRepoStatsNAWarningMessageProps {
   showWarning: boolean;
 }
 
-const RepoStatsNAWarningMessage = ({ showWarning }: IRepoStatsNAWarningMessageProps) => {
+const RepoStatsNAWarningMessage = ({
+  showWarning,
+}: IRepoStatsNAWarningMessageProps) => {
   if (!showWarning) {
     return null;
   }
@@ -27,11 +37,18 @@ const RepoStatsNAWarningMessage = ({ showWarning }: IRepoStatsNAWarningMessagePr
 };
 
 const AboutThisRepoSection = () => {
-  const [repoStatus, isLoading] = useRepoStatus() as [IRepoStatus | undefined, (boolean | undefined)];
+  const [repoStatus, isLoading] = useRepoStatus() as [
+    IRepoStatus | undefined,
+    boolean | undefined
+  ];
   const [showWarning, setShowWarning] = useState(false);
-  const getStatusticValue = (statusKey: RepoStatusKey, isLoading?: boolean, repoStatus?: IRepoStatus) => {
+  const getStatusticValue = (
+    statusKey: RepoStatusKey,
+    isLoading?: boolean,
+    repoStatus?: IRepoStatus
+  ) => {
     if (isLoading) {
-      return <Loader active/>;
+      return <Loader active />;
     }
     if (repoStatus) {
       switch (statusKey) {
@@ -42,7 +59,7 @@ const AboutThisRepoSection = () => {
           return repoStatus[statusKey].toLocaleString();
       }
     }
-    
+
     !showWarning && isLoading === false && !repoStatus && setShowWarning(true);
     return NADash;
   };
@@ -56,33 +73,53 @@ const AboutThisRepoSection = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icon name='github' className="about-this-repo-icon" />
+          <Icon name="github" className="about-this-repo-icon" />
         </a>
       </Header>
-      <RepoStatsNAWarningMessage showWarning={showWarning}/>
+      <RepoStatsNAWarningMessage showWarning={showWarning} />
       <Divider hidden />
       <Grid divided="vertically">
         <Grid.Row>
           <Grid.Column width={16}>
             <Statistic.Group size="tiny" widths={5}>
               <Statistic
-                value={getStatusticValue(RepoStatusKey.SIZE, isLoading, repoStatus)}
+                value={getStatusticValue(
+                  RepoStatusKey.SIZE,
+                  isLoading,
+                  repoStatus
+                )}
                 label={spm.lines}
               />
               <Statistic
-                value={getStatusticValue(RepoStatusKey.FORKS_COUNT, isLoading, repoStatus)}
+                value={getStatusticValue(
+                  RepoStatusKey.FORKS_COUNT,
+                  isLoading,
+                  repoStatus
+                )}
                 label={spm.forks}
               />
               <Statistic
-                value={getStatusticValue(RepoStatusKey.STARGAZERS_COUNT, isLoading, repoStatus)}
+                value={getStatusticValue(
+                  RepoStatusKey.STARGAZERS_COUNT,
+                  isLoading,
+                  repoStatus
+                )}
                 label={spm.stargazers}
               />
               <Statistic
-                value={getStatusticValue(RepoStatusKey.SUBSCRIBERS_COUNT, isLoading, repoStatus)}
+                value={getStatusticValue(
+                  RepoStatusKey.SUBSCRIBERS_COUNT,
+                  isLoading,
+                  repoStatus
+                )}
                 label={spm.subscribers}
               />
               <Statistic
-                value={getStatusticValue(RepoStatusKey.WATCHERS_COUNT, isLoading, repoStatus)}
+                value={getStatusticValue(
+                  RepoStatusKey.WATCHERS_COUNT,
+                  isLoading,
+                  repoStatus
+                )}
                 label={spm.watchers}
               />
             </Statistic.Group>
@@ -94,13 +131,21 @@ const AboutThisRepoSection = () => {
               <Statistic>
                 <Statistic.Label>{spm.updated}</Statistic.Label>
                 <Statistic.Value>
-                  {getStatusticValue(RepoStatusKey.UPDATED_AT, isLoading, repoStatus)}
+                  {getStatusticValue(
+                    RepoStatusKey.UPDATED_AT,
+                    isLoading,
+                    repoStatus
+                  )}
                 </Statistic.Value>
               </Statistic>
               <Statistic>
                 <Statistic.Label>{spm.created}</Statistic.Label>
                 <Statistic.Value>
-                  {getStatusticValue(RepoStatusKey.CREATED_AT, isLoading, repoStatus)}
+                  {getStatusticValue(
+                    RepoStatusKey.CREATED_AT,
+                    isLoading,
+                    repoStatus
+                  )}
                 </Statistic.Value>
               </Statistic>
             </Statistic.Group>
@@ -109,6 +154,6 @@ const AboutThisRepoSection = () => {
       </Grid>
     </div>
   );
-}
+};
 
 export default AboutThisRepoSection;

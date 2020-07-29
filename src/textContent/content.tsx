@@ -1,4 +1,4 @@
-import { IEducation, IExperience, IProject } from "textContent/contentTypes";
+import { IEducation, IExperience, IProject } from 'textContent/contentTypes';
 
 const welcome = {
   header: `Hi there, I'm Jingcheng.`,
@@ -88,7 +88,7 @@ const contacts = {
   github: 'https://github.com/jesse7zhangjc',
   angellist: 'https://angel.co/u/jingcheng-zhang',
   email: 'jingcheng.zhang@nyu.edu',
-}
+};
 
 export const content = {
   welcome,
