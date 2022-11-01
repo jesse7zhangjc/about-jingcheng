@@ -33,7 +33,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint './**/*.{ts,tsx,js,jsx}'",
     "predeploy": "react-scripts test --watchAll=false && react-scripts build",
-    "deploy": "gh-pages -d build"
+    "deploy": "cp ./CNAME ./build/CNAME && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
